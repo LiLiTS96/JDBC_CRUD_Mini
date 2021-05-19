@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane prefHeight="334.0" prefWidth="414.0" GridPane.columnIndex="1">
+         <children>
+            <Button layoutX="294.0" layoutY="64.0" mnemonicParsing="false" onAction="#updateOsoba" text="Update" />
+            <Button layoutX="256.0" layoutY="64.0" mnemonicParsing="false" onAction="#doddajOsobe" text="Add" />
+            <Button layoutX="21.0" layoutY="26.0" mnemonicParsing="false" onAction="#connect" text="connect" />
+            <Button layoutX="87.0" layoutY="26.0" mnemonicParsing="false" onAction="#disconnect" text="disconnect" />
+            <TextArea fx:id="text" layoutX="7.0" layoutY="250.0" prefHeight="84.0" prefWidth="401.0" />
+            <TextField fx:id="TextName" layoutX="21.0" layoutY="64.0" prefHeight="25.0" prefWidth="114.0" promptText="Name" />
+            <TextField fx:id="TextSurname" layoutX="135.0" layoutY="64.0" prefHeight="25.0" prefWidth="114.0" promptText="Surname" />
+            <TableView fx:id="tabelaOsob" layoutX="7.0" layoutY="103.0" onMouseClicked="#handleMouseAction" prefHeight="145.0" prefWidth="401.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="colSurname" prefWidth="75.0" text="Surname" />
+              </columns>
+            </TableView>
+            <Button layoutX="349.0" layoutY="64.0" mnemonicParsing="false" onAction="#deleteOsoba" text="Delete" />
+         </children>
+      </Pane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
